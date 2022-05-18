@@ -38,8 +38,6 @@ def CalcularTransformador(Uf, Rc, k, f, R1, L1, C1, p):
     M = k * sqrt(L1*L1)
     w = 2*pi*f
     XL = 1j*w*L1
-
-
     
     if p:    
       # Reatâncias da Indutância mútua
@@ -83,11 +81,11 @@ print(f"i2: {i2}")
 
 # ------------------------------ Tensão de Saída ----------------------------- #
 print('Com resistor na saída de %.2f Ω:' %Rc)
-print('i1 (pico) = %.3f A' %np.abs(i1))
-print('i2 (pico) = %.3f A' %np.abs(i2))
-print('V1 (pico) = %.3f V' %Uf)
-print('V2 (pico) = %.3f V' %(np.abs(v2)))
-print('Relação V1/V2 = %.3f' %(np.abs(Uf/(v2))))
+print('i1 (pico) = %.6f A' %np.abs(i1))
+print('i2 (pico) = %.6f A' %np.abs(i2))
+print('V1 (pico) = %.6f V' %Uf)
+print('V2 (pico) = %.6f V' %(np.abs(v2)))
+print('Relação V1/V2 = %.6f' %(np.abs(Uf/(v2))))
 
 
 
